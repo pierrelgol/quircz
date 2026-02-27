@@ -1,0 +1,13 @@
+.{
+    .name = .quircz,
+    .version = "0.0.0",
+    .fingerprint = 0xafd5b4894ccbef79,
+    .minimum_zig_version = "0.16.0-dev.2670+56253d9e3",
+    .dependencies = .{
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+    },
+}
