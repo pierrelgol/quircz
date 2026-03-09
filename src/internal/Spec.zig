@@ -1,0 +1,12 @@
+pub const max_version = 40;
+pub const max_alignment = 7;
+pub const max_regions = 254;
+pub const max_capstones = 32;
+pub const max_grids = max_capstones * 2;
+pub const finder_size = 7;
+pub const alignment_size = 5;
+pub const perspective_parameter_count = 8;
+pub const max_grid_size = max_version * 4 + 17;
+pub const max_bitmap_bytes = ((max_grid_size * max_grid_size) + 7) / 8;
+pub const max_payload_bytes = 8896;
+pub const finder_pattern_ratio = [5]u8{ 1, 1, 3, 1, 1 };
