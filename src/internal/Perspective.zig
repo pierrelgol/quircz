@@ -1,5 +1,7 @@
 const std = @import("std");
+
 const Spec = @import("Spec.zig");
+
 const Perspective = @This();
 
 pub const Scalar = f64;

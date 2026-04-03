@@ -1,5 +1,7 @@
 const std = @import("std");
+
 const Image = @import("Image.zig");
+
 pub const Histogram = @This();
 
 items: [256]u32,

@@ -3,6 +3,7 @@ const std = @import("std");
 pub const Detect = @import("Detect.zig");
 pub const Decode = @import("Decode.zig");
 pub const Encode = @import("Encode.zig");
+pub const C = @import("c_api.zig");
 const BitStream = @import("internal/BitStream.zig");
 const Capstone = @import("internal/Capstone.zig");
 const FloodFill = @import("internal/FloodFill.zig");
@@ -24,6 +25,7 @@ comptime {
     std.testing.refAllDecls(Detect);
     std.testing.refAllDecls(Decode);
     std.testing.refAllDecls(Encode);
+    std.testing.refAllDecls(C);
     std.testing.refAllDecls(BitStream);
     std.testing.refAllDecls(Capstone);
     std.testing.refAllDecls(FloodFill);

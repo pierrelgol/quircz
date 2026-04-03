@@ -1,4 +1,5 @@
 const std = @import("std");
+
 const Detect = @import("../Detect.zig");
 const Capstone = @import("Capstone.zig");
 const FloodFill = @import("FloodFill.zig");

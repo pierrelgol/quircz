@@ -1,4 +1,5 @@
 const std = @import("std");
+
 const Decode = @import("../Decode.zig");
 
 const max_poly = 64;

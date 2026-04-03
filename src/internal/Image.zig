@@ -1,5 +1,7 @@
 const std = @import("std");
+
 const Histogram = @import("Histogram.zig");
+
 pub const Image = @This();
 pub const Pixel = u8;
 pub const Threshold = u8;
