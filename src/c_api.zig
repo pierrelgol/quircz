@@ -563,7 +563,7 @@ test "c detect and decode round trip an encoded symbol" {
         }
     }
 
-    var scratch = try std.testing.allocator.alloc(u8, Detect.scratchBytesForImage(width, height));
+    const scratch = try std.testing.allocator.alloc(u8, Detect.scratchBytesForImage(width, height));
     defer std.testing.allocator.free(scratch);
 
     const detector = quircz_detector_create(grayscale.ptr, width, height, scratch.ptr, scratch.len) orelse return error.TestUnexpectedResult;
