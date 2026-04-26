@@ -4,6 +4,14 @@
     .fingerprint = 0xafd5b4894ccbef79,
     .minimum_zig_version = "0.16.0",
     .dependencies = .{
+        .quirc_zig = .{
+            .url = "git+https://github.com/pierrelgol/quirc?ref=master#3f35e14237de724267a665987e254c65b56bcb49",
+            .hash = "quirc_zig-0.0.0-JL7TkfkzAQBcQGYTYarOMMQezj5_jjRj4yXSQwY2lKMk",
+        },
+        .libpng = .{
+            .url = "git+https://github.com/allyourcodebase/libpng?ref=main#e123eca2140de78f1017a46c24e330fb3024fc58",
+            .hash = "libpng-1.6.57-oiaFGuYqAAB3CK1mjIzXHn2Z3EVV9okuko-VH23OOSV_",
+        },
     },
     .paths = .{
         "build.zig",
