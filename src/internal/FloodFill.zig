@@ -308,7 +308,7 @@ fn floodFillCallNext(
 
 test "fillSpan SIMD boundary matches scalar on long uniform row" {
     const width = 100;
-    var labels = [_]u8{0xFF} ** width;
+    var labels: [width]u8 = @splat(0xff);
     for (10..81) |i| labels[i] = 1;
     const span = try fillSpan(&labels, width, 1, .{ .x = 40, .y = 0 }, 1, 7);
     try std.testing.expectEqual(@as(i32, 10), span.left);
@@ -321,7 +321,7 @@ test "fillSpan SIMD boundary matches scalar on long uniform row" {
 test "fillSpan SIMD boundary with seed at VecLen-aligned position" {
     const VecLen = std.simd.suggestVectorLength(u8) orelse 8;
     const width = VecLen * 4;
-    var labels = [_]u8{1} ** (VecLen * 4);
+    var labels: [width]u8 = @splat(1);
     labels[0] = 0;
     labels[VecLen * 4 - 1] = 0;
     const span = try fillSpan(&labels, @intCast(width), 1, .{ .x = @intCast(VecLen), .y = 0 }, 1, 7);
@@ -369,7 +369,7 @@ test "stack depth helper matches upstream bound" {
 test "tight stack depth handles rotated ring style region" {
     const width = 51;
     const height = 51;
-    var labels = [_]u8{0} ** (width * height);
+    var labels: [width * height]u8 = @splat(0);
     const center: i32 = 25;
 
     for (0..height) |y| {

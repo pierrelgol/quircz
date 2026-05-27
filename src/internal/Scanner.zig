@@ -404,7 +404,8 @@ test "extract rejects invalid detection before scan" {
     var scanner = Scanner.init();
     scanner.reset(&fba);
 
-    const image = Image.init(&[_]u8{0} ** (21 * 21), 21, 21);
+    var grayscale: [21 * 21]u8 = @splat(0);
+    const image = Image.init(&grayscale, 21, 21);
     const detection = Detect.Detection{ .grid_size = 20 };
 
     try std.testing.expectError(error.InvalidDetection, scanner.extract(&image, &detection));
